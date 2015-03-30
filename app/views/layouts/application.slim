@@ -1,0 +1,64 @@
+doctype html
+html
+  head
+    title #{set_title(@title)}
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'
+    = stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/superhero/bootstrap.min.css'
+    = stylesheet_link_tag 'application', media: 'all'
+
+    = csrf_meta_tags
+  body
+    = render 'layouts/logo'
+    = render 'layouts/nav'
+
+    / #alerts
+    /   #alerts-inner
+    /     - if success
+    /       .alert.alert-success.alert-dismissible.fade.in role="alert"
+    /         button.close type="button" data-dismiss="alert" aria-label="Close"
+    /           span aria-hidden="true"
+    /             i.fa.fa-times
+    /         .alert-header
+    /           = success['header']
+    /         p
+    /           = success['body']
+    /
+    /     - if info
+    /       .alert.alert-info.alert-dismissible.fade.in role="alert"
+    /         button.close type="button" data-dismiss="alert" aria-label="Close"
+    /           span aria-hidden="true"
+    /             i.fa.fa-times
+    /         .alert-header
+    /           = info['header']
+    /         p
+    /           = info['body']
+    /
+    /     - if warning
+    /       .alert.alert-warning.alert-dismissible.fade.in role="alert"
+    /         button.close type="button" data-dismiss="alert" aria-label="Close"
+    /           span aria-hidden="true"
+    /             i.fa.fa-times
+    /         .alert-header
+    /           = warning['header']
+    /         p
+    /           = warning['body']
+    /
+    /     - if danger
+    /       .alert.alert-danger.alert-dismissible.fade.in role="alert"
+    /         button.close type="button" data-dismiss="alert" aria-label="Close"
+    /           span aria-hidden="true"
+    /             i.fa.fa-times
+    /         .alert-header
+    /           = danger['header']
+    /         p
+    /           = danger['body']
+
+    .main-content
+      = yield
+
+    = render 'layouts/footer'
+
+    = javascript_include_tag 'application'
+    = javascript_include_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'
+    = javascript_include_tag 'https://fb.me/react-with-addons-0.12.2.js'
