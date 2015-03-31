@@ -5,8 +5,12 @@
         li class=(@title == 'Home')
           =link_to root_path do
             i.fa.fa-home.menu-icon
-              | Home
+              | &nbsp; Home
         li class=(@title == 'About')
           = link_to about_pages_path do
             i.fa.fa-user.nemu-icon
-            | About me
+            | &nbsp; About me
+        li class=(@title == 'Contact me' ? 'active' : 'inactive')
+          = link_to contact_pages_path do
+            i.fa.fa-phone.menu-icon
+            | &nbsp; Contact

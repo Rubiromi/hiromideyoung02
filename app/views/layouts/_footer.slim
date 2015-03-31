@@ -2,9 +2,10 @@
   .row
     .col-md-8.col-md-offset-2
       .row
-        .col-md-4
-          p Copyright &copy; 2015 Hiromi De Young
-        .col-md-4
+        .col-md-4.copy
+          | Copyright &copy; &nbsp;
+          = Time.now.year
+          | &nbsp; - &nbsp; Hiromi De Young
         .col-md-4
           = link_to 'https://twitter.com/hiromideyoung' do
             i.fa.fa-twitter.menu-icon

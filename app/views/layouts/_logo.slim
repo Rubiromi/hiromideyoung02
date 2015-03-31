@@ -1,4 +1,12 @@
-/ .logo
-/   .row
-/     .col-md-2
-/       = image_tag ''
+.logo
+  .shibuya01 alt="Responsive image"
+    = image_tag 'nhknamiki.jpg', class: 'img-responsive'
+
+
+    / .col-md-6
+    /   form role="search"
+    /     .input-group
+    /       = text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search through my amazing website'
+    /       .input-group-addon.iga-no-padding
+    /         = button_tag class: 'icon-button' do
+    /           span.glyphicon.glyphicon-search
