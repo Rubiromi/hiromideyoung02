@@ -1,1 +1,16 @@
-h1 This is an index page
+.parallax-content
+  .parallax-container data-parallax="scroll" data-bleed="10" data-position="top" data-image-src="#{asset_path 'nhknamiki.jpg'}" data-natural-width="1972" data-natural-height="1405"
+    .main-message
+      span Freeze your special moments
+      br
+      span with my Naked Lens
+      br
+      br
+      form action="/login"
+        input.btn.btn-success.btn-lg.login type="submit" value="Sign in now"
+
+  .introduction
+    .row
+      .col-md-8.col-md-offset-2
+        = image_tag 'hiromi02.jpg', class: 'float-img-left'
+        | Welcome to Naked Lens LLC!
