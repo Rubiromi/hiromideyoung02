@@ -1,0 +1,12 @@
+.navbar.navbar-default
+  .container-fluid
+    .collapse.navbar-collapse#navbar-collapse
+      ul.nav.navbar-nav
+        li class=(@title == 'Home')
+          =link_to root_path do
+            i.fa.fa-home.menu-icon
+              | Home
+        li class=(@title == 'About')
+          = link_to about_pages_path do
+            i.fa.fa-user.nemu-icon
+            | About me
